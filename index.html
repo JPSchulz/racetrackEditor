@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://mosi.uni-saarland.de/people/timo/ -->
+<html>
+  <head>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"
+    ></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Racetrack Editor | Modeling and Simulation</title>
+
+    <meta
+      name="description"
+      content="About me I am a Ph.D. student in the Modeling and Simulation Group at the Computer Science Department of Saarland University and a member of the Graduate Sch..."
+    />
+    <meta name="robots" content="index,follow" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Racetrack Editor | Modeling and Simulation</title>
+    <meta name="generator" content="Jekyll v4.2.2" />
+    <meta property="og:title" content="Timo P. Gros" />
+    <meta name="author" content="Modeling and Simulation Group SIC" />
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="canonical" href="https://mosi.uni-saarland.de/people/timo/" />
+    <meta property="og:url" content="/people/timo/" />
+    <meta property="og:site_name" content="Modeling and Simulation" />
+    <meta property="og:image" content="/assets/img/timo.jpg" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="article:published_time"
+      content="2019-01-07T00:00:00-06:00"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="/assets/img/timo.jpg" />
+    <meta property="twitter:title" content="Timo P. Gros" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+          "@type": "Person",
+          "name": "Modeling and Simulation Group SIC"
+        },
+        "dateModified": "2022-08-22T03:06:41-05:00",
+        "datePublished": "2019-01-07T00:00:00-06:00",
+        "description": "About me I am a Ph.D. student in the Modeling and Simulation Group at the Computer Science Department of Saarland University and a member of the Graduate School of Computer Science.",
+        "headline": "Timo P. Gros",
+        "image": "/assets/img/timo.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "/people/timo/" },
+        "url": "/people/timo/"
+      }
+    </script>
+    <!-- End Jekyll SEO tag -->
+
+    <link href="./MoSi_files/css" rel="stylesheet" type="text/css" />
+    <link href="./MoSi_files/css(1)" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./MoSi_files/all.css" type="text/css" />
+
+    <link rel="stylesheet" href="./MoSi_files/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./MoSi_files/all.min.css" />
+
+    <link rel="stylesheet" href="./MoSi_files/main.css" />
+    <link rel="canonical" href="https://mosi.uni-saarland.de/people/timo/" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Modeling and Simulation"
+      href="https://mosi.uni-saarland.de/feed.xml"
+    />
+
+    <style type="text/css">
+      .MathJax_Hover_Frame {
+        border-radius: 0.25em;
+        -webkit-border-radius: 0.25em;
+        -moz-border-radius: 0.25em;
+        -khtml-border-radius: 0.25em;
+        box-shadow: 0px 0px 15px #83a;
+        -webkit-box-shadow: 0px 0px 15px #83a;
+        -moz-box-shadow: 0px 0px 15px #83a;
+        -khtml-box-shadow: 0px 0px 15px #83a;
+        border: 1px solid #a6d !important;
+        display: inline-block;
+        position: absolute;
+      }
+      .MathJax_Menu_Button .MathJax_Hover_Arrow {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -khtml-border-radius: 4px;
+        font-family: "Courier New", Courier;
+        font-size: 9px;
+        color: #f0f0f0;
+      }
+      .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+        display: block;
+        background-color: #aaa;
+        border: 1px solid;
+        border-radius: 3px;
+        line-height: 0;
+        padding: 4px;
+      }
+      .MathJax_Hover_Arrow:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+      .MathJax_Hover_Arrow:hover span {
+        background-color: #ccc !important;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_About {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #dddddd;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      #MathJax_About.MathJax_MousePost {
+        outline: none;
+      }
+      .MathJax_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 2px;
+        border: 1px solid #cccccc;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      .MathJax_MenuItem {
+        padding: 2px 2em;
+        background: transparent;
+      }
+      .MathJax_MenuArrow {
+        position: absolute;
+        right: 0.5em;
+        padding-top: 0.25em;
+        color: #666666;
+        font-size: 0.75em;
+      }
+      .MathJax_MenuActive .MathJax_MenuArrow {
+        color: white;
+      }
+      .MathJax_MenuArrow.RTL {
+        left: 0.5em;
+        right: auto;
+      }
+      .MathJax_MenuCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+      .MathJax_MenuCheck.RTL {
+        right: 0.7em;
+        left: auto;
+      }
+      .MathJax_MenuRadioCheck {
+        position: absolute;
+        left: 1em;
+      }
+      .MathJax_MenuRadioCheck.RTL {
+        right: 1em;
+        left: auto;
+      }
+      .MathJax_MenuLabel {
+        padding: 2px 2em 4px 1.33em;
+        font-style: italic;
+      }
+      .MathJax_MenuRule {
+        border-top: 1px solid #cccccc;
+        margin: 4px 1px 0px;
+      }
+      .MathJax_MenuDisabled {
+        color: GrayText;
+      }
+      .MathJax_MenuActive {
+        background-color: Highlight;
+        color: HighlightText;
+      }
+      .MathJax_MenuDisabled:focus,
+      .MathJax_MenuLabel:focus {
+        background-color: #e8e8e8;
+      }
+      .MathJax_ContextMenu:focus {
+        outline: none;
+      }
+      .MathJax_ContextMenu .MathJax_MenuItem:focus {
+        outline: none;
+      }
+      #MathJax_AboutClose {
+        top: 0.2em;
+        right: 0.2em;
+      }
+      .MathJax_Menu .MathJax_MenuClose {
+        top: -10px;
+        left: -10px;
+      }
+      .MathJax_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        font-family: "Courier New", Courier;
+        font-size: 24px;
+        color: #f0f0f0;
+      }
+      .MathJax_MenuClose span {
+        display: block;
+        background-color: #aaa;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        line-height: 0;
+        padding: 8px 0 6px;
+      }
+      .MathJax_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+      .MathJax_MenuClose:hover span {
+        background-color: #ccc !important;
+      }
+      .MathJax_MenuClose:hover:focus {
+        outline: none;
+      }
+    </style>
+    <style type="text/css">
+      .MathJax_Preview .MJXf-math {
+        color: inherit !important;
+      }
+    </style>
+    <style type="text/css">
+      .MJX_Assistive_MathML {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 1px 0 0 0 !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: block !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+        width: 100% !important;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_Zoom {
+        position: absolute;
+        background-color: #f0f0f0;
+        overflow: auto;
+        display: block;
+        z-index: 301;
+        padding: 0.5em;
+        border: 1px solid black;
+        margin: 0;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        box-shadow: 5px 5px 15px #aaaaaa;
+        -webkit-box-shadow: 5px 5px 15px #aaaaaa;
+        -moz-box-shadow: 5px 5px 15px #aaaaaa;
+        -khtml-box-shadow: 5px 5px 15px #aaaaaa;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+      #MathJax_ZoomOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 300;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+      #MathJax_ZoomFrame {
+        position: relative;
+        display: inline-block;
+        height: 0;
+        width: 0;
+      }
+      #MathJax_ZoomEventTrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 302;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+    </style>
+    <style type="text/css">
+      .MathJax_Preview {
+        color: #888;
+      }
+      #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #e6e6e6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap;
+      }
+      #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+      .MathJax_Error {
+        color: #cc0000;
+        font-style: italic;
+      }
+    </style>
+    <style type="text/css">
+      .MJXp-script {
+        font-size: 0.8em;
+      }
+      .MJXp-right {
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -ms-transform-origin: right;
+        -o-transform-origin: right;
+        transform-origin: right;
+      }
+      .MJXp-bold {
+        font-weight: bold;
+      }
+      .MJXp-italic {
+        font-style: italic;
+      }
+      .MJXp-scr {
+        font-family: MathJax_Script, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-frak {
+        font-family: MathJax_Fraktur, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-sf {
+        font-family: MathJax_SansSerif, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-cal {
+        font-family: MathJax_Caligraphic, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-mono {
+        font-family: MathJax_Typewriter, "Times New Roman", Times, STIXGeneral,
+          serif;
+      }
+      .MJXp-largeop {
+        font-size: 150%;
+      }
+      .MJXp-largeop.MJXp-int {
+        vertical-align: -0.2em;
+      }
+      .MJXp-math {
+        display: inline-block;
+        line-height: 1.2;
+        text-indent: 0;
+        font-family: "Times New Roman", Times, STIXGeneral, serif;
+        white-space: nowrap;
+        border-collapse: collapse;
+      }
+      .MJXp-display {
+        display: block;
+        text-align: center;
+        margin: 1em 0;
+      }
+      .MJXp-math span {
+        display: inline-block;
+      }
+      .MJXp-box {
+        display: block !important;
+        text-align: center;
+      }
+      .MJXp-box:after {
+        content: " ";
+      }
+      .MJXp-rule {
+        display: block !important;
+        margin-top: 0.1em;
+      }
+      .MJXp-char {
+        display: block !important;
+      }
+      .MJXp-mo {
+        margin: 0 0.15em;
+      }
+      .MJXp-mfrac {
+        margin: 0 0.125em;
+        vertical-align: 0.25em;
+      }
+      .MJXp-denom {
+        display: inline-table !important;
+        width: 100%;
+      }
+      .MJXp-denom > * {
+        display: table-row !important;
+      }
+      .MJXp-surd {
+        vertical-align: top;
+      }
+      .MJXp-surd > * {
+        display: block !important;
+      }
+      .MJXp-script-box > * {
+        display: table !important;
+        height: 50%;
+      }
+      .MJXp-script-box > * > * {
+        display: table-cell !important;
+        vertical-align: top;
+      }
+      .MJXp-script-box > *:last-child > * {
+        vertical-align: bottom;
+      }
+      .MJXp-script-box > * > * > * {
+        display: block !important;
+      }
+      .MJXp-mphantom {
+        visibility: hidden;
+      }
+      .MJXp-munderover {
+        display: inline-table !important;
+      }
+      .MJXp-over {
+        display: inline-block !important;
+        text-align: center;
+      }
+      .MJXp-over > * {
+        display: block !important;
+      }
+      .MJXp-munderover > * {
+        display: table-row !important;
+      }
+      .MJXp-mtable {
+        vertical-align: 0.25em;
+        margin: 0 0.125em;
+      }
+      .MJXp-mtable > * {
+        display: inline-table !important;
+        vertical-align: middle;
+      }
+      .MJXp-mtr {
+        display: table-row !important;
+      }
+      .MJXp-mtd {
+        display: table-cell !important;
+        text-align: center;
+        padding: 0.5em 0 0 0.5em;
+      }
+      .MJXp-mtr > .MJXp-mtd:first-child {
+        padding-left: 0;
+      }
+      .MJXp-mtr:first-child > .MJXp-mtd {
+        padding-top: 0;
+      }
+      .MJXp-mlabeledtr {
+        display: table-row !important;
+      }
+      .MJXp-mlabeledtr > .MJXp-mtd:first-child {
+        padding-left: 0;
+      }
+      .MJXp-mlabeledtr:first-child > .MJXp-mtd {
+        padding-top: 0;
+      }
+      .MJXp-merror {
+        background-color: #ffff88;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        padding: 1px 3px;
+        font-style: normal;
+        font-size: 90%;
+      }
+      .MJXp-scale0 {
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+      }
+      .MJXp-scale1 {
+        -webkit-transform: scaleX(0.1);
+        -moz-transform: scaleX(0.1);
+        -ms-transform: scaleX(0.1);
+        -o-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+      }
+      .MJXp-scale2 {
+        -webkit-transform: scaleX(0.2);
+        -moz-transform: scaleX(0.2);
+        -ms-transform: scaleX(0.2);
+        -o-transform: scaleX(0.2);
+        transform: scaleX(0.2);
+      }
+      .MJXp-scale3 {
+        -webkit-transform: scaleX(0.3);
+        -moz-transform: scaleX(0.3);
+        -ms-transform: scaleX(0.3);
+        -o-transform: scaleX(0.3);
+        transform: scaleX(0.3);
+      }
+      .MJXp-scale4 {
+        -webkit-transform: scaleX(0.4);
+        -moz-transform: scaleX(0.4);
+        -ms-transform: scaleX(0.4);
+        -o-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+      }
+      .MJXp-scale5 {
+        -webkit-transform: scaleX(0.5);
+        -moz-transform: scaleX(0.5);
+        -ms-transform: scaleX(0.5);
+        -o-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+      }
+      .MJXp-scale6 {
+        -webkit-transform: scaleX(0.6);
+        -moz-transform: scaleX(0.6);
+        -ms-transform: scaleX(0.6);
+        -o-transform: scaleX(0.6);
+        transform: scaleX(0.6);
+      }
+      .MJXp-scale7 {
+        -webkit-transform: scaleX(0.7);
+        -moz-transform: scaleX(0.7);
+        -ms-transform: scaleX(0.7);
+        -o-transform: scaleX(0.7);
+        transform: scaleX(0.7);
+      }
+      .MJXp-scale8 {
+        -webkit-transform: scaleX(0.8);
+        -moz-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
+        -o-transform: scaleX(0.8);
+        transform: scaleX(0.8);
+      }
+      .MJXp-scale9 {
+        -webkit-transform: scaleX(0.9);
+        -moz-transform: scaleX(0.9);
+        -ms-transform: scaleX(0.9);
+        -o-transform: scaleX(0.9);
+        transform: scaleX(0.9);
+      }
+      .MathJax_PHTML .noError {
+        font-size: 90%;
+        text-align: left;
+        color: black;
+        padding: 1px 3px;
+        border: 1px solid;
+      }
+      .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+      .buttons {
+        margin: auto;
+        width: 80vw;
+        padding: 10px;
+      }
+      .img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        max-height: 90%;
+      }
+      #narrowTable {
+        border-spacing: 0px;
+        border: white;
+        border-collapse: collapse;
+
+        height: auto;
+      }
+      #narrowEntry {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 1px;
+        height: 1px;
+        border: #83a;
+      }
+      #narrowButton {
+        width: 33%;
+      }
+      #selector {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="MathJax_Message" style="display: none"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="https://mosi.uni-saarland.de/"
+          >Modeling and Simulation</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <!-- Dropdown --><!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="nav-item dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="nav-item dropdown-item" href="#">Action</a>
+            <a class="nav-item dropdown-item" href="#">Another action</a>
+            <a class="nav-item dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://mosi.uni-saarland.de/research"
+                >Research</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://mosi.uni-saarland.de/people"
+                >People</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://mosi.uni-saarland.de/teaching"
+                >Teaching</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://mosi.uni-saarland.de/contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+
+    <header class="empty_masthead">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto my-auto">
+            <div class="page-heading">
+              <h1>Racetrack Editor</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start of page body -->
+    <div class="center">
+      <div style="text-align: center">
+        <div
+          id="canvascontainer"
+          style="display: flex; justify-content: center"
+        ></div>
+      </div>
+      <table id="narrowTable">
+        <tr>
+          <td>
+            <label>Load map: </label>
+            <input id="inputLoader" type="file" onchange="loadFile()" />
+            <br />
+            <label for="slider">Scale:</label><br />
+            <input
+              type="range"
+              id="scaleSlider"
+              name="slider"
+              min="10"
+              max="30"
+              value="10"
+            /><br />
+            <label for="xc">width: </label
+            ><input
+              name="xc"
+              type="text"
+              id="xc"
+              size="3"
+              style="margin: 5px"
+              value="128"
+            />
+            <br />
+            <label for="yc">height: </label
+            ><input
+              type="text"
+              name="yc"
+              id="yc"
+              size="3"
+              style="margin: 5px"
+              value="64"
+            />
+            <button id="reset" onclick="resetCanvas()">Reset</button>
+            <button id="undo" disabled onclick="undo()">undo</button>
+            <button id="redo" disabled onclick="redo()">redo</button>
+            <br />
+            <br />
+            <button id="download" onclick="saveMap()">download map</button>
+          </td>
+          <td>
+            <form>
+              select the brush size:
+              <select id="brushSize">
+                <option value="0">1</option>
+                <option value="1">3</option>
+                <option value="2">5</option>
+                <option value="3">7</option>
+              </select>
+            </form>
+            <div>
+              Select a tool:
+
+              <div>
+                <input
+                  type="radio"
+                  id="brush"
+                  name="tools"
+                  value="brush"
+                  checked
+                />
+                <label for="brush">Brush</label>
+              </div>
+
+              <div>
+                <input type="radio" id="fill" name="tools" value="fill" />
+                <label for="fill">fill tool</label>
+              </div>
+            </div>
+            <form>
+              select the brush type:
+              <select id="brushType"></select>
+            </form>
+          </td>
+          <td>
+            <button id="addSymbolBtn" onclick="addSymbolButton()">
+              Add a symbol</button
+            ><br />
+            <div style="padding: 5px">
+              <label for="colorPicker">Pick a color:</label>
+              <input type="color" id="colorPicker" /><br />
+            </div>
+            <div style="padding: 5px">
+              <label for="symbol">Symbol as used in the map file:</label><br />
+              <input
+                type="text"
+                id="symbol"
+                value="x"
+                style="width: 20%"
+                maxlength="1"
+              /><br />
+            </div>
+            <div style="padding: 5px">
+              <label for="symbol">Symbol to be displayed:</label><br />
+              <input
+                type="text"
+                id="displayedSymbol"
+                value="x"
+                style="width: 20%"
+                maxlength="1"
+              /><br />
+            </div>
+            <div style="padding: 5px">
+              <label for="labelInput">Label</label><br />
+              <input type="text" id="labelInput" value="wall" />
+            </div>
+            <br />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let x = 128;
+      let y = 64;
+      let lastX = undefined;
+      let lastY = undefined;
+      let myMap = [];
+
+      let mementoPosition = 0;
+
+      var selectors = document.getElementById("brushType");
+      var selectorsSize = document.getElementById("brushSize");
+      var tools = document.getElementsByName("tools");
+      var slider = document.getElementById("scaleSlider");
+      var selected;
+      let changed = false;
+      let redraw = false;
+      let changes = [];
+      var img;
+      let scale = scaleSlider.value;
+      let locked = false;
+      let isEmpty = true;
+
+      //code Prettifier keeps changing the key symbols to be without string identifiers (i.e. x instead of "x"). Accessing them however still only works with them
+      //key   r      g    b  letter description
+      var mapping = {
+        x: [210, 210, 210, "x", "wall"],
+        ".": [255, 255, 255, "", "racetrack"],
+        g: [128, 255, 0, "g", "goal"],
+        s: [76, 0, 153, "", "start"],
+        i: [102, 212, 237, "", "ice"],
+        p: [156, 105, 5, "", "sand"],
+        "<": [245, 245, 245, "<", "road left"],
+        ">": [245, 245, 245, ">", "road right"],
+        "^": [245, 245, 245, "∧", "road up"],
+        v: [245, 245, 245, "v", "road down"],
+        b: [250, 167, 0, "S", "beginning / car spawner"],
+        e: [0, 255, 12, "", "green trafic light"],
+        y: [250, 246, 0, "", "yellow trafic light"],
+        t: [0, 0, 0, "", "red & yellow trafic light"],
+        r: [255, 0, 0, "", "red trafic light"],
+        d: [252, 3, 198, "~", "road damage"],
+      };
+      // The Memento pattern is used to save and restore the state of an object.
+      // A memento is a snapshot of an object's state.
+      var Memento = {
+        savedState: null, // The saved state of the object.
+        save: function (state) {
+          // Save the state of an object.
+          this.savedState = state;
+        },
+        restore: function () {
+          // Restore the state of an object.
+          return this.savedState;
+        },
+      };
+
+      // The Originator is the object that creates the memento.
+      // defines a method for saving the state inside a memento.
+      var Originator = {
+        state: null,
+
+        createMemento: function () {
+          return {
+            state: this.state,
+          };
+        },
+
+        setMemento: function (memento) {
+          this.state = memento.state;
+        },
+      };
+
+      // The Caretaker stores mementos of the objects and
+      // provides operations to retrieve them.
+      var Caretaker = {
+        //TODO:
+        //add a len restrictment??
+
+        mementos: [],
+        addMemento: function (memento) {
+          this.mementos.push(memento);
+        },
+        getMemento: function (index) {
+          return this.mementos[index];
+        },
+        len: function () {
+          return this.mementos.length;
+        },
+        dropAfter: function (index) {
+          // console.log("dropAfter");
+          // console.log(index);
+          // console.log(this.mementos.length);
+          if (index <= this.len()) {
+            this.mementos = this.mementos.slice(0, index);
+          }
+          // console.log(this.mementos.length);
+        },
+
+        reset: function () {
+          this.mementos = [];
+        },
+      };
+
+      function setup() {
+        var canvas = createCanvas(x * scale + 1, y * scale + 1);
+
+        if (isEmpty) {
+          fillList();
+        }
+
+        canvas.parent("canvascontainer");
+        img = createImage(x * scale, y * scale);
+        img.loadPixels();
+        myMap = [];
+        for (i = 0; i < y; i++) {
+          myMap[i] = ".".repeat(x);
+        }
+        let field;
+        for (var i = 0; i < x; i++) {
+          for (var j = 0; j < y; j++) {
+            field = myMap[j][i];
+            drawSymbol(i, j, field);
+          }
+        }
+        drawLines();
+        line(10, 10, x * scale, y * scale);
+        Originator.state = myMap.map((item) => item.slice());
+        Caretaker.addMemento(Originator.createMemento());
+      }
+
+      function draw() {
+        image(img, 0, 0);
+        // if (mouseIsPressed === true) {
+        //   line(mouseX, mouseY, pmouseX, pmouseY);
+        // }
+
+        if (scaleSlider.value != scale) {
+          // console.log("scale was changed!");
+          // console.log(scale);
+          // console.log(scaleSlider.value);
+          scale = scaleSlider.value;
+          resizeCanvas(x * scale + 1, y * scale + 1);
+          redraw = true;
+        }
+
+        //changed indicates that the map state has changed.
+        //processing only draws the map once per state and saves the canvas afterwards as an image which is displayed.
+        //processing will display said image as long as no changes occur.
+
+        if (changed) {
+          update();
+          drawLines();
+          img = get();
+          img.loadPixels();
+          changed = false;
+        }
+
+        //redraw is true if the entire map changed (i.e. memento was used)
+        if (redraw) {
+          // console.log("redraw");
+          let field;
+          for (var i = 0; i < x; i++) {
+            for (var j = 0; j < y; j++) {
+              field = myMap[j][i];
+              drawSymbol(i, j, field);
+            }
+          }
+          drawLines();
+          redraw = false;
+          img = get();
+          img.loadPixels();
+        }
+      }
+
+      function fillList() {
+        for (const key in mapping) {
+          let entry = mapping[key];
+          let label = entry[4];
+          let optionElement = document.createElement("option");
+          optionElement.textContent = label;
+          optionElement.value = key;
+          selectors.appendChild(optionElement);
+        }
+        isEmpty = false;
+      }
+
+      function update() {
+        for (const change of changes) {
+          drawSymbol(change[0], change[1], change[2]);
+        }
+        changes = [];
+      }
+
+      function drawLines() {
+        strokeWeight(1);
+        for (var i = 0; i < x; i++) {
+          line(i * scale, 0, i * scale, y * scale);
+        }
+        for (var j = 0; j < y; j++) {
+          line(0, j * scale, x * scale, j * scale);
+        }
+        line(0, y * scale, x * scale, y * scale);
+        line(x * scale, 0, x * scale, y * scale);
+        strokeWeight(0);
+      }
+
+      function drawSymbol(i, j, c) {
+        if (c != "t") {
+          let data = mapping[c];
+          let r = data[0];
+          let g = data[1];
+          let b = data[2];
+          let txt = data[3];
+          strokeWeight(0);
+          fill(r, g, b);
+          rect(i * scale, j * scale, scale, scale);
+          if (txt != "") {
+            fill(0, 0, 0);
+            textAlign(CENTER, CENTER);
+            text(txt, i * scale + scale / 2, j * scale + scale / 2);
+          }
+          strokeWeight(1);
+        } else {
+          //draw top half
+          c = "r";
+          let data = mapping[c];
+          let r = data[0];
+          let g = data[1];
+          let b = data[2];
+          let txt = data[3];
+          strokeWeight(0);
+          fill(r, g, b);
+          rect(i * scale, j * scale, scale, scale / 2);
+          c = "y";
+          data = mapping[c];
+          r = data[0];
+          g = data[1];
+          b = data[2];
+          txt = data[3];
+          strokeWeight(0);
+          fill(r, g, b);
+          rect(i * scale, j * scale + scale / 2, scale, scale / 2);
+        }
+      }
+
+      function replace(a, b, c, sizeOverride = false) {
+        //places the new character c at position (x,y) in the map
+        let size = 0;
+        if (!sizeOverride) {
+          size = int(selectorsSize.value);
+        }
+        changed = true;
+        for (var i = max(a - size, 0); i <= min(a + size, x - 1); i++) {
+          for (var j = max(0, b - size); j <= min(b + size, y - 1); j++) {
+            myMap[j] = replaceChar(myMap[j], c, i);
+            changes.push([i, j, c]);
+          }
+        }
+      }
+
+      function resetCanvas() {
+        x = document.getElementById("xc").value;
+        y = document.getElementById("yc").value;
+        Caretaker.reset();
+        mementoPosition = 0;
+        document.getElementById("redo").disabled = true;
+        document.getElementById("undo").disabled = true;
+        setup();
+      }
+
+      function myFill(a, b, c) {
+        replace(a, b, c, true);
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            let nb = constrain(b + j - 1, 0, y - 1);
+            let na = constrain(a + i - 1, 0, x - 1);
+            // console.log("wtfff", c, na, nb, myMap[nb][na]);
+            if (nb == b || na == a) {
+              replace(na, nb, c, true);
+            }
+            if (c != myMap[nb][na]) {
+              myFill(na, nb, c);
+            }
+          }
+        }
+        return;
+      }
+
+      function replaceChar(s, c, x) {
+        //replaces character c at position x in string s and returns the new string
+        return s.substring(0, x) + c + s.substring(x + 1);
+      }
+
+      function drawWall(x, y) {
+        push();
+        translate(x * scale, y * scale);
+        fill(196, 196, 196);
+        rect(0, 0, scale, scale);
+        s = Math.floor(0.2 * scale);
+        e = Math.floor(0.8 * scale);
+        line(s, s, e, e);
+        line(s, e, e, s);
+        pop();
+      }
+
+      function mousePressed() {
+        selected = selectors.value;
+        let tool = "";
+        for (t of tools) {
+          if (t.checked) {
+            tool = t.value;
+          }
+        }
+        //check if the mouse in within the canvas
+        if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+          locked = true;
+          ax = constrain(mouseX, 0, width);
+          ay = constrain(mouseY, 0, height);
+          ax = Math.floor(map(ax, 0, width, 0, x));
+          ay = Math.floor(map(ay, 0, height, 0, y));
+          lastX = ax;
+          lastY = ay;
+
+          document.getElementById("undo").disabled = false;
+
+          switch (tool) {
+            case "brush":
+              replace(ax, ay, selected);
+              break;
+            case "fill":
+              myFill(ax, ay, selected);
+              break;
+            default:
+              replace(ax, ay, selected);
+          }
+        }
+      }
+      function transform(v, c, g) {
+        //transform mouse coordinate v to cell on map using canvas dim c and grid dim g
+        return Math.floor(map(constrain(v, 0, c), 0, c, 0, g));
+      }
+
+      function mouseDragged() {
+        if (locked) {
+          if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+            ax = transform(mouseX, width, x);
+            ay = transform(mouseY, height, y);
+            px = transform(pmouseX, width, x);
+            py = transform(pmouseY, height, y);
+            replace(ax, ay, selected);
+            dx = mouseX - pmouseX;
+            dy = mouseY - pmouseY;
+            if (abs(dx) > abs(dy)) {
+              s = dx / abs(dx); //get sign (+/-)
+              sy = abs(dx) / dy; //how many cells to move in x direction before we alter y direction
+              iy = pmouseY;
+              for (var i = 0; i < abs(dx); i++) {
+                ix = s * i + pmouseX;
+                replace(
+                  transform(ix, width, x),
+                  transform(iy, height, y),
+                  selected
+                );
+                if ((Math.floor(i % sy) == 0) & (dy != 0)) {
+                  iy += dy / abs(dy); //move one cell in y direction
+                  replace(
+                    transform(ix, width, x),
+                    transform(iy, height, y),
+                    selected
+                  );
+                }
+              }
+            } else {
+              s = dy / abs(dy); //get sign (+/-)
+              sx = abs(dy) / dx;
+              ix = pmouseX;
+              for (var i = 0; i < abs(dy); i++) {
+                iy = s * i + pmouseY;
+                replace(
+                  transform(ix, width, x),
+                  transform(iy, height, y),
+                  selected
+                );
+                if ((Math.floor(i % sx) == 0) & (dx != 0)) {
+                  ix += dx / abs(dx);
+                  replace(
+                    transform(ix, width, x),
+                    transform(iy, height, y),
+                    selected
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+
+      function mouseReleased() {
+        //only operate on the map if something changed (i.e. the mouse press was in canvas)
+        if (locked) {
+          locked = false;
+          // console.log("pre released");
+          // console.log(mementoPosition);
+          // console.log("Caretaker.len()");
+          // console.log(Caretaker.len());
+          //whenever the mouse button is released the current state gets pushed into the memento
+          if (Originator.state != myMap.map((item) => item.slice())) {
+            Originator.state = myMap.map((item) => item.slice());
+            Caretaker.addMemento(Originator.createMemento());
+            mementoPosition++;
+          }
+          // console.log(Originator.state);
+          // console.log("Caretaker.len()2");
+          // console.log(Caretaker.len());
+          if ((document.getElementById("redo").disabled != true) | false) {
+            //if we r on top of the stack just push the state
+            document.getElementById("redo").disabled = true;
+            Caretaker.dropAfter(mementoPosition);
+            if (Originator.state != myMap.map((item) => item.slice())) {
+              Originator.state = myMap.map((item) => item.slice());
+              Caretaker.addMemento(Originator.createMemento());
+              mementoPosition++;
+            }
+          }
+        }
+      }
+
+      function undo() {
+        // console.log("pre Undo");
+        // console.log(mementoPosition);
+        // console.log(Originator.state);
+        mementoPosition = max(mementoPosition - 1, 0);
+        if (mementoPosition == 0) {
+          document.getElementById("undo").disabled = true;
+        }
+        Originator.setMemento(Caretaker.getMemento(mementoPosition));
+        myMap = Originator.state.map((item) => item.slice());
+
+        redraw = true;
+        document.getElementById("redo").disabled = false;
+        // console.log("undo");
+        // console.log(mementoPosition);
+        // console.log(Originator.state);
+        // console.log("Caretaker.len()");
+        // console.log(Caretaker.len());
+      }
+
+      function redo() {
+        // console.log("pre redo");
+        // console.log(mementoPosition);
+        mementoPosition++;
+        // console.log("redo");
+        // console.log(mementoPosition);
+        Originator.setMemento(Caretaker.getMemento(mementoPosition));
+        myMap = Originator.state.map((item) => item.slice());
+        document.getElementById("undo").disabled = false;
+
+        redraw = true;
+        if (1 + mementoPosition == Caretaker.len()) {
+          document.getElementById("redo").disabled = true;
+        }
+      }
+
+      function addSymbolButton() {
+        var color = document.getElementById("colorPicker").value;
+        var symbol = document.getElementById("symbol").value;
+        var displayedSymbol = document.getElementById("displayedSymbol").value;
+        var label = document.getElementById("labelInput").value;
+        var r = parseInt(color.substr(1, 2), 16);
+        var b = parseInt(color.substr(3, 2), 16);
+        var g = parseInt(color.substr(5, 2), 16);
+        addSymbol(r, g, b, symbol, displayedSymbol, label);
+      }
+
+      function addSymbol(r, b, g, symbol, displayedSymbol, label) {
+        if (symbol in mapping) {
+          var result = window.confirm(
+            "The symbol '" +
+              symbol +
+              "' already has a representation. Would you like to overwrite it?"
+          );
+          if (result != true) {
+            return 0;
+          }
+        }
+        mapping[symbol] = [r, g, b, displayedSymbol, label];
+
+        while (selectors.firstChild) {
+          selectors.removeChild(selectors.firstChild);
+        }
+        redraw = true;
+        fillList();
+      }
+
+      function createTrack() {
+        let content = "dim: " + str(y) + " " + str(x) + "\n";
+        for (row of myMap) {
+          content += row + "\n";
+        }
+        return content;
+      }
+
+      function saveMap() {
+        var blob = new Blob([createTrack()], {
+          type: "contentType",
+        });
+        var a = document.createElement("a");
+        let mapName = prompt("Please enter a name for the map", "NewMap");
+        if (mapName == null) {
+          return 0;
+        }
+        a.download = mapName + ".track";
+        a.href = URL.createObjectURL(blob);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+
+      function loadFile() {
+        //Source: https://www.w3.org/TR/FileAPI/
+
+        var file = document.getElementById("inputLoader").files[0];
+        if (file) {
+          var reader = new FileReader();
+          reader.readAsText(file);
+          reader.onprogress = updateProgress;
+          reader.onload = loaded;
+        }
+      }
+
+      function updateProgress(evt) {
+        if (evt.lengthComputable) {
+          // evt.loaded and evt.total are ProgressEvent properties
+          var loaded = evt.loaded / evt.total;
+          if (loaded < 1) {
+            // Increase the prog bar length
+            // style.width = (loaded * 200) + "px";
+          }
+        }
+      }
+
+      function loaded(evt) {
+        // Obtain the read file data
+        var fileString = evt.target.result;
+        var strings = fileString.split("\n");
+        if (strings[0].slice(0, 3).toLowerCase() == "dim") {
+          strings.shift();
+        }
+        // console.log(strings);
+        y = strings.length;
+        x = strings[0].length;
+        for (var i = 0; i < y; i++) {
+          if (strings[i].length != x) {
+            console.log(i, strings[i]);
+            console.log(
+              "Not all rows of the map contain the same amount of symbols!"
+            );
+            if (strings[i] == "") {
+              strings.splice(i, 1);
+              y = y - 1;
+              continue;
+            }
+            // return 0;
+          }
+          for (var j = 0; j < x; j++) {
+            if (!(strings[i][j] in mapping)) {
+              addSymbol(
+                255,
+                255,
+                255,
+                strings[i][j],
+                strings[i][j],
+                "label for '" + strings[i][j] + "'"
+              );
+            }
+          }
+        }
+        myMap = strings;
+        redraw = true;
+        resizeCanvas(x * scale + 1, y * scale + 1);
+        document.getElementById("xc").value = x;
+        document.getElementById("yc").value = y;
+        Caretaker.reset();
+        mementoPosition = 0;
+        Originator.state = myMap.map((item) => item.slice());
+        Caretaker.addMemento(Originator.createMemento());
+      }
+    </script>
+  </body>
+</html>
